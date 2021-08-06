@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+{% for message in get_flashed_messages() %}
+<h2 style="text-align: center;">{{ message }}</h2>
+{% endfor %}
+
+<main class="form-signin">
+    <form class="form" method="post" action="articles">
+      <h1 class="h3 mb-3 fw-normal">Log in Page</h1>
+  
+      <div class="form-floating">
+        <label for="floatingInput">Email address</label>
+        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      </div>
+      <br>
+      <div class="form-floating">
+        <label for="floatingPassword">Password</label>
+        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      </div>
+      <br>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" action="articles.html">Sign Up</button>
+    </form>
+  </main>
+
+{% endblock %}
